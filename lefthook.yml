@@ -1,5 +1,5 @@
 pre-commit:
   commands:
     rubocop:
-      glob: "*.rb"
-      run: bundle exec rubocop -DES --safe-auto-correct --force-exclusion --fail-level E
+      glob: "*.{rb}"
+      run: bundle exec rubocop -DES --safe-auto-correct --force-exclusion --fail-level E {staged_files}
