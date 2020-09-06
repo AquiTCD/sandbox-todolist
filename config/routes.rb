@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "home#index"
   devise_for :user, skip: :all
   devise_for(:database_authentications,
              class_name: "User::DatabaseAuthentication",
