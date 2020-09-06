@@ -1,0 +1,21 @@
+h2 Registration Form
+= form_with(url: finish_user_registration_path, local: :true) do |f|
+  = render "devise/shared/error_messages", resource: @user
+  = render "devise/shared/error_messages", resource: @user_database_authentication
+  .field
+    p
+      = f.label "nickname"
+      = f.text_field :nickname
+    p
+      = f.label "email"
+      = f.email_field :email, value: resource.email, autocomplete: "email", readonly: true
+    p
+      = f.label "password"
+      = f.password_field :password
+    p
+      = f.label "password_confirmation"
+      = f.password_field :password_confirmation
+    p
+      = f.hidden_field :confirmation_token, value: resource.confirmation_token
+  .actions
+    = f.submit "Submit"
