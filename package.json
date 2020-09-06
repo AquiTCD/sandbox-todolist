@@ -10,6 +10,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@arkweid/lefthook": "^0.7.2",
     "commitizen": "^4.2.1",
     "cz-customizable": "^6.3.0",
     "webpack-dev-server": "^3.11.0"
