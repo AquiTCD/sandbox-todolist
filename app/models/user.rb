@@ -14,4 +14,5 @@ class User < ApplicationRecord
   belongs_to :user
   devise :database_authenticatable, :validatable, :rememberable, :recoverable
   has_one :database_authentication, dependent: :destroy
+  has_one :twitter_authentication, dependent: :destroy
 end
