@@ -1,0 +1,15 @@
+ul
+  - if current_user
+    li
+      = current_user.nickname
+    li
+      = link_to "logout", destroy_database_authentication_session_path, method: :delete
+    li
+      = link_to "edit", edit_user_registration_path
+  - else
+    li
+      = link_to "login", new_database_authentication_session_path
+    li
+      = link_to "sign up", new_user_registration_path
+    li
+      = link_to "login with twitter", twitter_authentication_twitter_omniauth_authorize_path
